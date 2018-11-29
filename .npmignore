@@ -2,4 +2,3 @@
 src/*
 tslint.json
 .babelrc
-.hgignore
