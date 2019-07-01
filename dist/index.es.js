@@ -1,5 +1,3 @@
-'use strict';
-
 // IE10 Mobile Viewport fix 2.1.0
 // Copyright (C) 2013-2018 ConsidoNet Solutions / www.considonet.com
 // Released under MIT Licence
@@ -29,10 +27,8 @@ VERSION HISTORY
 + Initial version
 
 */
-
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
   document.addEventListener("DOMContentLoaded", function () {
-
     var msViewportStyle = document.createElement("style");
     msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
     document.getElementsByTagName("head")[0].appendChild(msViewportStyle);

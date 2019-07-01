@@ -1,14 +1,11 @@
-// IE10 Mobile Viewport fix 2.1.1
-// Copyright (C) 2013-2019 ConsidoNet Solutions / www.considonet.com
+'use strict';
+
+// IE10 Mobile Viewport fix 2.1.0
+// Copyright (C) 2013-2018 ConsidoNet Solutions / www.considonet.com
 // Released under MIT Licence
 
 /*
 VERSION HISTORY
-2.1.1 (20190701) @pg
-* Dependencies update
-* Switch to yarn
-* ES and UMD module compilation
-
 2.1.0 (20181129) @pg
 + Switched to git (now available on github), file cleanup
 + Now built with rollup
@@ -32,17 +29,10 @@ VERSION HISTORY
 + Initial version
 
 */
-
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-  document.addEventListener("DOMContentLoaded", () => {
-
-    const msViewportStyle = document.createElement("style");
-    msViewportStyle.appendChild(
-      document.createTextNode(
-        "@-ms-viewport{width:auto!important}"
-      )
-    );
+  document.addEventListener("DOMContentLoaded", function () {
+    var msViewportStyle = document.createElement("style");
+    msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
     document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-
   });
 }
